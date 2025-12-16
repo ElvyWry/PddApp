@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PddApp (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "PddApp (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
