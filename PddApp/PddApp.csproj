@@ -14,11 +14,10 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="AboutPage.xaml" />
+    <None Remove="ResultPage.xaml" />
     <None Remove="TicketSelectionPage.xaml" />
     <None Remove="TicketTestPage.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Remove="WelcomePage.xaml" />
+    <None Remove="WelcomePage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +50,9 @@
     <Page Update="AboutPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Update="ResultPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <None Update="tickets.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -60,9 +62,9 @@
     <Page Update="TicketTestPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <None Update="WelcomePage.xaml">
+    <Page Update="WelcomePage.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </None>
+    </Page>
   </ItemGroup>
 
   <!--
