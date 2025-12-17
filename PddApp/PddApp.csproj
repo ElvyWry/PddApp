@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
@@ -14,6 +14,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Page Remove="AboutPage.xaml" />
+    <Page Remove="TicketSelectionPage.xaml" />
     <Page Remove="WelcomePage.xaml" />
   </ItemGroup>
 
@@ -49,6 +50,9 @@
     </None>
     <None Update="tickets.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TicketSelectionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="WelcomePage.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -1,0 +1,58 @@
+<Page
+    x:Class="PddApp.TicketSelectionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PddApp"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="40">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Content="Назад" Click="BackButton_Click" Margin="0,0,0,30"/>
+
+        <StackPanel Grid.Row="1" Spacing="20">
+            <TextBlock Text="Выберите билет для тестирования (1-40)" 
+                       FontSize="28" 
+                       FontWeight="SemiBold" 
+                       HorizontalAlignment="Left"/>
+
+            <GridView x:Name="TicketsGridView" 
+                      SelectionMode="None" 
+                      IsItemClickEnabled="True"
+                      ItemClick="TicketsGridView_ItemClick">
+
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="5" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
+
+                <GridView.ItemTemplate>
+                    <DataTemplate x:DataType="local:TicketWrapper">
+                        <Border Width="120" 
+                                Height="120" 
+                                CornerRadius="8" 
+                                Background="SteelBlue" 
+                                Margin="10" 
+                                BorderBrush="DarkGray" 
+                                BorderThickness="1">
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <TextBlock Text="БИЛЕТ" 
+                                           FontSize="16" 
+                                           Foreground="White"/>
+                                <TextBlock Text="{x:Bind Id}" 
+                                           FontSize="40" 
+                                           FontWeight="Bold" 
+                                           Foreground="White" 
+                                           HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </StackPanel>
+    </Grid>
+</Page>
