@@ -13,8 +13,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Page Remove="AboutPage.xaml" />
-    <Page Remove="TicketSelectionPage.xaml" />
+    <None Remove="AboutPage.xaml" />
+    <None Remove="TicketSelectionPage.xaml" />
+    <None Remove="TicketTestPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
     <Page Remove="WelcomePage.xaml" />
   </ItemGroup>
 
@@ -45,15 +48,18 @@
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.251106002" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="AboutPage.xaml">
+    <Page Update="AboutPage.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </None>
+    </Page>
     <None Update="tickets.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="TicketSelectionPage.xaml">
+    <Page Update="TicketSelectionPage.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </None>
+    </Page>
+    <Page Update="TicketTestPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <None Update="WelcomePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
