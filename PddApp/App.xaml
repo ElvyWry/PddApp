@@ -1,16 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Application
     x:Class="PddApp.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:PddApp">
+    RequestedTheme="Light">
+
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
-                <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
-            <!-- Other app resources here -->
+
+            <SolidColorBrush x:Key="PrimaryColor" Color="#0078D4"/>
+            <SolidColorBrush x:Key="SecondaryColor" Color="#E8EAED"/>
+            <SolidColorBrush x:Key="SuccessColor" Color="#4CAF50"/>
+            <SolidColorBrush x:Key="ErrorColor" Color="#F44336"/>
+            <SolidColorBrush x:Key="SkipColor" Color="#FF9800"/>
+
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="{StaticResource PrimaryColor}"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontWeight" Value="SemiBold"/>
+                <Setter Property="CornerRadius" Value="4"/>
+                <Setter Property="Padding" Value="15,10"/>
+                <Setter Property="Margin" Value="0,5"/>
+                <Setter Property="UseSystemFocusVisuals" Value="True"/>
+            </Style>
+
+            <Style TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Segoe UI"/>
+            </Style>
+
+            <Style TargetType="RadioButton">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="Margin" Value="0,5,0,5"/>
+                <Setter Property="MinHeight" Value="40"/>
+                <Setter Property="Padding" Value="10,0,0,0"/>
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
