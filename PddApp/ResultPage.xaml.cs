@@ -31,7 +31,7 @@ namespace PddApp
             CorrectText.Text = $"Правильных ответов: {correct}";
             IncorrectText.Text = $"Неправильных ответов: {incorrect}";
             SkippedText.Text = $"Пропущено: {skipped}";
-            if (incorrect <= 2)
+            if (correct >= 7)
             {
                 FinalResultText.Text = "Тест СДАН!";
                 FinalResultText.Foreground = new Microsoft.UI.Xaml.Media.SolidColorBrush(Microsoft.UI.Colors.Green);

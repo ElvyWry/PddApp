@@ -63,7 +63,7 @@ namespace PddApp
             ExplanationText.Text = string.Empty;
             CheckButton.Visibility = Visibility.Visible;
             SkipButton.Visibility = Visibility.Visible;
-            FinishButton.Visibility = Visibility.Visible;
+            FinishButton.Visibility = Visibility.Collapsed;
 
            
             OptionsPanel.Children.Clear();
@@ -362,6 +362,45 @@ namespace PddApp
 
 
             return text.EndsWith(".png", StringComparison.OrdinalIgnoreCase);
+
+        }
+        private async void EarlyExitButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            ContentDialog exitDialog = new ContentDialog
+            {
+                Title = "Завершение теста",
+                Content = "Вы действительно хотите прервать тестирование? Результаты не будут учтены.",
+
+
+                PrimaryButtonText = "На главную",
+
+
+                SecondaryButtonText = "Начать заново",
+
+
+                CloseButtonText = "Отмена",
+
+                DefaultButton = ContentDialogButton.Close,
+
+
+                XamlRoot = this.Content.XamlRoot
+            };
+
+
+            ContentDialogResult result = await exitDialog.ShowAsync();
+
+
+            if (result == ContentDialogResult.Primary)
+            {
+
+                this.Frame.Navigate(typeof(WelcomePage));
+            }
+            else if (result == ContentDialogResult.Secondary)
+            {
+
+                this.Frame.Navigate(typeof(TicketTestPage), CurrentTicket.Id);
+            }
 
         }
     }
