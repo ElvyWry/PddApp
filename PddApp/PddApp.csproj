@@ -14,35 +14,6 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="AboutPage.xaml" />
-    <None Remove="images\b1_q1.png" />
-    <None Remove="images\b1_q3_1.png" />
-    <None Remove="images\b1_q3_2.png" />
-    <None Remove="images\b1_q3_3.png" />
-    <None Remove="images\b1_q7_1.png" />
-    <None Remove="images\b1_q7_2.png" />
-    <None Remove="images\b1_q7_3.png" />
-    <None Remove="images\b3_q1.png" />
-    <None Remove="images\b3_q10.png" />
-    <None Remove="images\b3_q2.png" />
-    <None Remove="images\b3_q3.png" />
-    <None Remove="images\b3_q4.png" />
-    <None Remove="images\b3_q5.png" />
-    <None Remove="images\b3_q5_2.png" />
-    <None Remove="images\b3_q5_3.png" />
-    <None Remove="images\b3_q6.png" />
-    <None Remove="images\b3_q7.png" />
-    <None Remove="images\b3_q8.png" />
-    <None Remove="images\b3_q9.png" />
-    <None Remove="images\b4_q2_2.png" />
-    <None Remove="images\b4_q2_3.png" />
-    <None Remove="images\b4_q2_4.png" />
-    <None Remove="images\b4_q2_5.png" />
-    <None Remove="images\b4_q2_6.png" />
-    <None Remove="images\b4_q3_2.png" />
-    <None Remove="images\b4_q3_3.png" />
-    <None Remove="images\b6_q1.png" />
-    <None Remove="images\b6_q2.png" />
-    <None Remove="images\b6_q3.png" />
     <None Remove="ResultPage.xaml" />
     <None Remove="TicketSelectionPage.xaml" />
     <None Remove="TicketTestPage.xaml" />
